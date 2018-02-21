@@ -1,16 +1,18 @@
 <?php
 
-namespace Laraspace\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Solarium\Client;
 
 class SolariumServiceProvider extends ServiceProvider
 {
+    protected $defer = true;
+
     /**
-     * Bootstrap the application services.
+     * Register any application services.
      *
-     * @return void
+     * @return  void
      */
     public function register()
     {
